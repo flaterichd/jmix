@@ -34,6 +34,10 @@ plugins {
     //id "org.sonarqube" version "latest.release"
 }
 
+plugins {
+    id "org.cyclonedx.bom" version "3.0.0-alpha-1"
+}
+
 configure(subprojects.findAll { it.name != 'bom' }) {
     apply(plugin: 'io.jmix.build')
 }
